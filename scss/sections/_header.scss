@@ -1,0 +1,33 @@
+.header {
+    padding: 16px 0px 16px 0px;
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        font-weight: 700;
+        font-size: var(--font-size-logo);
+        color: var(--color-standart);
+
+        span {
+            color: var(--color-text);
+        }
+    }
+
+    &__menu {}
+
+    &__list {
+        display: flex;
+        gap: 27rem;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: var(--font-size-desc);
+        text-transform: uppercase;
+        color: var(--color-header-link);
+    }
+}

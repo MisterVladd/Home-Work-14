@@ -1,0 +1,27 @@
+html{
+    font-size: 1px;
+    
+    @include tablet{
+        font-size: 0.9px;
+    }
+    
+    @include mobile{
+        font-size: 0.8px;
+    }
+}
+
+body{
+    font-size: 16rem;
+    background: var(--background);
+    font-family: var(--font-family);
+    color: --color-standart;
+}
+
+.container{
+    padding: 0 20rem;
+    max-width: 1166rem;
+    margin-inline: auto;
+}
+.bg-light{
+    background: var(--bg-light);
+}

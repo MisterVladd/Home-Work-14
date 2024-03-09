@@ -1,0 +1,69 @@
+.experience {
+    padding: var(--standart-padding);
+
+    &__title {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: var(--font-size-title);
+        line-height: 152%;
+        color: var(--color-title);
+        margin-bottom: 24rem;
+
+        span {
+            color: var(--color-text);
+        }
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: var(--font-size-desc);
+        line-height: 169%;
+        color: var(--color-header-link);
+        margin-bottom: 80rem;
+        max-width: 730rem;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: 366rem 336rem 366rem;
+        gap: 29rem;
+    }
+
+    &__block {
+        border-radius: 12rem;
+        padding: 32rem;
+        background: var(--background);
+
+        &__year {
+            font-weight: 400;
+            font-size: 20rem;
+            line-height: 135%;
+            color: #d1d5db;
+            margin-bottom: 8rem;
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 26rem;
+            line-height: 158%;
+            color: var(--color-text);
+            margin-bottom: 4rem;
+        }
+
+        &__editor {
+            font-weight: 700;
+            font-size: 16rem;
+            line-height: 169%;
+            color: #d1d5db;
+            margin-bottom: 8rem;
+        }
+
+        &__desc {
+            font-weight: 400;
+            font-size: 16rem;
+            line-height: 169%;
+            color: var(--color-desc);
+            padding: 8rem;
+        }
+    }
+}

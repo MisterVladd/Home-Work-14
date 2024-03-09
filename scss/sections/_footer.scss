@@ -1,0 +1,31 @@
+.footer {
+
+    &__title {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 40rem;
+        text-align: center;
+        color: #fff;
+        margin-top: 56rem;
+        margin-bottom: 24rem;
+    }
+
+    &__desc {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16rem;
+        line-height: 169%;
+        text-align: center;
+        color: var(--color-header-link);
+        margin-bottom: 55rem;
+        max-width: 685rem;
+        margin-inline: auto;
+    }
+
+    &__social {
+        display: flex;
+        gap: 16rem;
+        justify-content: center;
+        margin-bottom: 56rem;
+    }
+}
