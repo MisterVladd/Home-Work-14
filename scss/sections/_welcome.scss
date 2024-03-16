@@ -1,15 +1,21 @@
 .welcome {
     padding: var(--standart-padding);
-
+    @include desktop{
+        padding: var(--desktop-padding);
+    }
     &__items {
         display: flex;
         justify-content: space-between;
-        max-width: 1092rem;
+        align-items: center;
         margin: 0rem 26rem 0rem 8rem;
+        gap: 20rem;
+        @include tablet{
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__text {
-        margin: 78rem 0rem 78rem 0rem;
         max-width: 466rem;
 
         p {
@@ -27,6 +33,9 @@
         line-height: 152%;
         color: var(--color-title);
         margin-bottom: 8rem;
+        @include mobile-mini{
+            font-size: 30rem;
+        }
     }
 
     &__decsription {
@@ -38,18 +47,8 @@
     }
 
     &__btn {
-        border-radius: 4rem;
         padding: 8rem 20rem;
-        width: 123rem;
-        height: 43rem;
         background: var(--color-btn);
-
-        a {
-            font-weight: 400;
-            font-size: var(--font-size-desc);
-            line-height: 169%;
-            color: var(--color-btn-text);
-        }
     }
 
     &__img {

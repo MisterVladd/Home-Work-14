@@ -1,5 +1,8 @@
 .experience {
     padding: var(--standart-padding);
+    @include desktop{
+        padding: var(--desktop-padding);
+    }
 
     &__title {
         font-family: var(--second-family);
@@ -8,6 +11,9 @@
         line-height: 152%;
         color: var(--color-title);
         margin-bottom: 24rem;
+        @include mobile-mini{
+            font-size: 30rem;
+        }
 
         span {
             color: var(--color-text);
@@ -25,14 +31,22 @@
 
     &__items {
         display: grid;
-        grid-template-columns: 366rem 336rem 366rem;
+        grid-template-columns: repeat(auto-fill, minmax(356px, 1fr));
         gap: 29rem;
+        @include mobile-mini{
+            grid-template-columns: 1fr;
+        }
     }
 
     &__block {
         border-radius: 12rem;
         padding: 32rem;
         background: var(--background);
+        transition: .3s all ease-in-out;
+        &:hover{
+            box-shadow: 0px 0px 15px 3px var(--color-text);
+            transform: scale(1.02);
+        }
 
         &__year {
             font-weight: 400;

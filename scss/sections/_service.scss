@@ -1,5 +1,8 @@
 .service {
     padding: var(--standart-padding);
+    @include desktop{
+        padding: var(--desktop-padding);
+    }
 
     &__title {
         font-weight: 700;
@@ -7,6 +10,9 @@
         line-height: 152%;
         color: var(--color-title);
         margin-bottom: 24rem;
+        @include mobile-mini{
+            font-size: 30rem;
+        }
 
         span {
             color: var(--color-text);
@@ -27,12 +33,23 @@
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         gap: 30rem;
         text-align: center;
+        svg{
+            fill: var(--color-text)
+        }
+        @include mobile-mini{
+            grid-template-columns: 1fr;
+        }
     }
 
     &__block {
         background: var(--background);
         border-radius: 12rem;
         padding: 32rem;
+        transition: .3s all ease-in-out;
+        &:hover{
+            box-shadow: 0px 0px 15px 3px var(--color-text);
+            transform: scale(1.02);
+        }
 
         &__title {
             margin-inline: auto;

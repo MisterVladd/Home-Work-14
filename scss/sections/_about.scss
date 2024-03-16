@@ -1,10 +1,19 @@
 .about {
     padding: var(--standart-padding);
-
+    @include desktop{
+        padding: var(--desktop-padding);
+    }
     &__items {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin: 0rem 8rem 0rem 8rem;
+        gap: 50rem;
+        @include desktop{
+            flex-direction: column;
+            align-items: center;
+            gap: 0rem;
+        }
     }
 
     &__block {
@@ -13,6 +22,9 @@
         width: 475rem;
         height: 502rem;
         position: relative;
+        @include mobile-mini{
+            transform: scale(0.7);
+        }
 
         img {
             position: absolute;
@@ -24,7 +36,6 @@
 
     &__text {
         max-width: 509rem;
-        margin: 82rem 0rem 82rem 0rem;
     }
 
     &__title {
@@ -33,6 +44,9 @@
         line-height: 152%;
         color: var(--color-title);
         margin-bottom: 32rem;
+        @include mobile-mini{
+            font-size: 30rem;
+        }
 
         span {
             color: var(--color-text);
@@ -54,18 +68,8 @@
 
 
     &__btn {
-        border-radius: 4rem;
+        font-family: var(--second-family);
         padding: 16rem 20rem;
-        width: 124rem;
-        height: 59rem;
         background: var(--color-text);
-
-        a {
-            font-family: var(--second-family);
-            font-weight: 400;
-            font-size: var(--font-size-desc);
-            line-height: 169%;
-            color: var(--color-btn-text);
-        }
     }
 }

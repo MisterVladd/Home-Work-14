@@ -1,5 +1,8 @@
 .portfolio {
     padding: var(--standart-padding);
+    @include desktop{
+        padding: var(--desktop-padding);
+    }
 
     &__title {
         font-weight: 700;
@@ -8,6 +11,9 @@
         color: var(--color-title);
         text-align: center;
         margin-bottom: 24rem;
+        @include mobile-mini{
+            font-size: 30rem;
+        }
 
         span {
             color: var(--color-text);

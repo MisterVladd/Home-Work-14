@@ -1,5 +1,5 @@
 .footer {
-
+    
     &__title {
         font-family: var(--font-family);
         font-weight: 700;
@@ -27,5 +27,8 @@
         gap: 16rem;
         justify-content: center;
         margin-bottom: 56rem;
+        svg{
+            fill: var(--color-text);
+        }
     }
 }

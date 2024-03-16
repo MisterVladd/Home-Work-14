@@ -1,6 +1,8 @@
 .contact {
     padding: var(--standart-padding);
-
+    @include desktop{
+        padding: var(--desktop-padding);
+    }
     &__title {
         font-weight: 700;
         font-size: var(--font-size-title);
@@ -29,67 +31,105 @@
     &__row {
         display: flex;
         justify-content: space-between;
+        @include desktop{
+            justify-content: space-around;
+        }
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16rem;
+        line-height: 256%;
+        color: #f3f4f6;
+
+        span {
+            font-weight: 700;
+            color: var(--color-text);
+        }
     }
 
     &__info {
         margin: 50rem 0rem 50rem 0rem;
+        max-width: 347rem;
+        display: flex;
+        flex-direction: column;
+        gap: 16rem;
 
-        p {
-            font-family: var(--font-family);
-            font-weight: 400;
-            color: #f3f4f6;
-            font-size: 16rem;
-            line-height: 256%;
-
-            span {
-                font-weight: 700;
-                color: #eab308;
-            }
-        }
+        p {}
     }
 
     &__form {
         display: flex;
         flex-direction: column;
         gap: 32rem;
+        width: 540rem;
+        @include desktop{
+            width: 250rem;
+        }
     }
 
     &__btn {
-        border-radius: 4rem;
         padding: 16rem 20rem;
-        width: 123rem;
-        height: 59rem;
-        background: #eab308;
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 16rem;
-        line-height: 169%;
-        color: #000;
+        max-width: fit-content;
+        background: var(--color-text);
     }
 }
 
 .field1 {
+    display: block;
     & input {
-        width: 540rem;
-        height: 63rem;
+        width: 100%;
+        border: 0;
+        outline: 0;
         background: #1f2937;
         font-family: var(--font-family);
         font-weight: 400;
         font-size: 16rem;
         line-height: 256%;
         color: #f3f4f6;
+        padding: 11rem 5rem 11rem 18rem;
+
+        &::placeholder {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16rem;
+            line-height: 256%;
+            color: #898c92;
+            
+        }
     }
 }
 
 .field2 {
-    & input {
-        width: 540rem;
-        height: 166rem;
+    display: block;
+    & textarea {
+        width: 100%;
         background: #1f2937;
+        border: 0;
+        outline: 0;
         font-family: var(--font-family);
         font-weight: 400;
         font-size: 16rem;
         line-height: 256%;
         color: #f3f4f6;
+        resize: vertical;
+        min-height: 166rem;
+        max-height: 400rem;
+        padding: 10rem 5rem 5rem 18rem;
+
+
+        &::placeholder {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16rem;
+            line-height: 256%;
+            color: #898c92;
+        }
     }
 }
